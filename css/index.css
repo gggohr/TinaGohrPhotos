@@ -1,0 +1,135 @@
+.container {
+    padding: 80px 90px;
+  }
+
+.carousel-inner img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.footerImage img,
+#bio img {
+    width: 100%; /* Set width to 100% */
+    margin: auto;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #2d2d30;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+    opacity: 0.9;
+}
+
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+footer {
+    text-align: center;
+}
+
+#wedding img,
+#food img,
+#family img {
+    width: 30%;
+}
+
+#wedding img:hover,
+#food img:hover,
+#family img:hover {
+    cursor: zoom-in;
+    border: 2px solid blue;
+}
+
+.modal-body {
+    text-align: center;
+}
+
+#modelImage {
+    width: 90%;
+}
+
+.publishedSection {
+    padding: 10px 0px;
+}
+
+.publishedImages {
+    width: 100%;
+}
+
+.priceListItem {
+    padding: 5px 0;
+}
+
+.priceListHeader {
+    text-decoration: underline;
+}
+
+.priceListEmphasis {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.priceListMin {
+    padding: 2px 0;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+}
+
+#discountBar {
+    position: fixed;
+    bottom: 0px;
+    background: lightpink;
+    height: 60px;
+    width: 100%;
+    border: red 2px solid;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+}
+
+#discountMessage {
+    text-align: center;
+    font-size: 1em;
+}
+
+#discountMessageX {
+    border: black 2px solid;
+    border-radius: 5px;
+    padding: 2px 5px;
+    font-size: 0.8em;
+    float: right;
+    background: white;
+}
+
+#discountMessageX:hover {
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+body {
+    padding-bottom: 60px;
+}
+
+@media only screen and (min-width: 800px) {
+    #discountMessage {
+      padding-top: 10px;
+      font-size: 1.1em;
+    }
+  }
