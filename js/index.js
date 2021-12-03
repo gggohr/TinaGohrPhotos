@@ -24,7 +24,7 @@ $(document).ready(function(){
     });
 
     $('#wedding img, #food img, #family img').on('click', function() {
-      $('#zoomImageModal #modelImage').prop('src', this.alt);
+      $('#zoomImageModal #modelImage').prop('src', $(this).data('ref'));
       $('#zoomImageModal').modal('show');
     });
 
@@ -71,5 +71,26 @@ $(document).ready(function(){
     };
     setDiscountMessage();
 
-    
-  })
+    var ensureSlideImageSet = function(slide) {
+      var img = $('img', slide);
+      if(img.length == 1 && img[0].src == '') {
+        img[0].src = img.data('ref');
+      }
+    };
+
+    var ensureNextSlideImageSet = function(slide) {
+      var nextSlideId = $(slide).data('nextslideid');
+      var nextSlide = $('#' + nextSlideId);
+      ensureSlideImageSet(nextSlide);
+    };
+
+    $('#myImages').on('slide.bs.carousel', function (e) {
+      ensureSlideImageSet(e.relatedTarget);
+    });
+
+    $('#myImages').on('slid.bs.carousel', function (e) {
+      ensureNextSlideImageSet(e.relatedTarget);
+    });
+
+    ensureNextSlideImageSet($('#myImages .item.active'));
+  });
